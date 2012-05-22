@@ -7,7 +7,7 @@ a1 =400
 a2=0
 a=0
 b=0
-v = {{x=0,y=0},{x=0,y=0},{x=0,y=0},{x=0,y=0}, {x=0,y=0}, {x=0,y=0}}
+v = {{x=0,y=0},{x=0,y=0},{x=0,y=0},{x=0,y=0}, {x=0,y=0}, {x=0,y=0}, {x=0,y=0}, {x=0,y=0}, {x=0,y=0}, {x=0,y=0}, {x=0,y=0}}
 
 function love.draw()
 	h,j= love.mouse.getPosition();
@@ -24,11 +24,11 @@ function love.draw()
 	v[1].x = v[1].x+(h-v[1].x)*0.06
 	v[1].y = v[1].y+(j-v[1].y)*0.06
 	
-	for i=2, 6 do
+	for i=2, 11 do
 		v[i].x = v[i].x+(v[i-1].x-v[i].x)*0.06
 		v[i].y = v[i].y+(v[i-1].y-v[i].y)*0.06
 		
-		love.graphics.setColor( 255, 0, 120, 255 )
+		love.graphics.setColor( 64, 211, 120, 255 - i * 10)
 		love.graphics.rectangle( "fill", v[i].x,  v[i].y, 20, 20 )
 	end
 
